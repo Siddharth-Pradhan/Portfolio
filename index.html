@@ -8,34 +8,60 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
-   <div class="container">
+   <div class="home">
+   <button class="home-but" onclick="document.getElementById('homepage').scrollIntoView({ behavior: 'smooth' });">
+      <i class="fa-solid fa-house" style="font-size: 25px;"></i>
+    </button>
+  </div>
+   <div class="container" id=homepage>
         <video class="back-vid" loop autoplay muted plays-inline src="vid/galaxy.mp4" type="video/mp4"></video>
           <header>
             <div class="left">
-              <img src="images/sp.jpg" alt="logo">
-              <h1><span class="gradient">Siddharth</span>Pradhan</h1>
+              <h1 class="logo" style="cursor: pointer;"><span class="gradient">S.</span>P</h1>
+              <h1 class="namet"><span class="gradient">Siddharth</span>Pradhan</h1>
             </div>
-            <ul>
-              <li><a href="#">About</a> </li>
-              <li><a href="#">Skills</a> </li>
-                <li><a href="#">Projects</a> </li>
+            <ul class="midpor">
+              <li><a href="#About">About</a> </li>
+              <li><a href="#Projects">Projects</a> </li>
+              <li><a href="#contact">Contact</a> </li>
+                
             </ul>
 
-            <div class="box-icons">
+          
+            
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i> </div>
+
+          
+          </header>
+
+
+          <div class="sidebar">
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <ul>
+              <li class="sideli"><a href="#homepage">Home</a> </li>
+              <li class="sideli"><a href="#About">About Me</a> </li>
+              <li class="sideli"><a href="#Skills">Skills</a> </li>
+              <li class="sideli"><a href="#Projects">Projects</a> </li>
+              <li style="font-size: 100px;" class="sideli"><a href="#contact">Contact Me:</a> </li>
+
+
+                <div class="box-icons">
                   <a href="https://www.instagram.com/its_me_sid_aka_sp" target="_blank"><img class="imgs" src="images/instagram.png"></a>
                   <a href="https://x.com/cid0heart" target="_blank"><img class="imgs" src="images/twitter.png"></a>
                   <a href="https://github.com/Siddharth-Pradhan" target="_blank"><img class="imgs" src="images/git2.png"></a>
                   <a href="https://www.linkedin.com/in/siddharth-pradhan-47a3a028a/" target="_blank"><img class="imgs" src="images/linkedin.png"></a> 
+                 
             </div>
-          </header>
+              
+            </ul>
+          </div>
 
           <div class="blackhole">
             <video loop autoplay muted plays-inline src="vid/blackhole.mp4" type="video/mp4"></video>
           </div>
           
           <section class="hero">
-            <div class="hero-info">
+            <div class="hero-info autoBlur" >
               <div class="hero-info-title">
 
                 <i class="fa-brands fa-sketch"></i>    Front-end Developer Portfolio
@@ -46,8 +72,8 @@
               <button><i class="fa-solid fa-paper-plane"></i>Contact Me</button>
 
             </div>
-            <div class="hero-vid">
-              <video loop autoplay muted palys-inline src="vid/hero-video.mp4" type="video/mp4"></video>
+            <div class="hero-vid autoBlur " style=" mix-blend-mode:lighten;">
+             <img src="images/web.webp">
             </div>
 
             <div class="scroll"></div>
@@ -55,9 +81,9 @@
 
 
 
-          <section class="info-sec">
+          <section class="info-sec" id="About">
 
-            <hi class="sec-title"> <span class="gradient">Bits of</span> Me</hi>
+            <hi class="sec-title autoDisplay"> <span class="gradient">Bits of</span> Me</hi>
             <div class="info-cards">
 
                <div class="card1"  >
@@ -101,51 +127,51 @@
 
 
 
-        <section class="my-projects">
-            <h1 class="sec-title">My <span class="gradient">Projects</span></h1>
+        <section class="my-projects" id="Projects">
+            <h1 class="sec-title autoDisplay">My <span class="gradient">Projects</span></h1>
 
              <div class="pro-card">
-                  <div class="pro-vid" >
+                  <div class="pro-vid autoBlur" >
                     <video  loop play-inline muted id="pro1" src="vid/project1.mp4"></video>
                     <div class="hover-sign"></div>
                   </div>
-                  <div class="pro-info">
+                  <div class="pro-info fadein-left">
                     <h1><span class="gradient1">Gradely</span></h1>
                     <p>a responsive web-based grade calculator to compute SGPA and CGPA based on user-input course credits and
                       grades.
                       Applied core GPA calculation logic using credit-weighted average formulas, supporting multiple semesters.
                       Optimized for all screen sizes with mobile-friendly layout and minimal load time.</p>
-                    <button><i class="fa-solid fa-arrow-up-right-from-square">Website</i></button>
+                    <button  onclick="window.open('https://siddharth-pradhan.github.io/Gradely/', '_blank')"><i class="fa-solid fa-arrow-up-right-from-square">Website</i></button>
                   </div>
 
               </div>
 
                <div class="pro-card">
-                  <div class="pro-vid" >
+                  <div class="pro-vid autoBlur" >
                     <video  loop play-inline muted id="pro2" src="vid/project1.mp4"></video>
                     <div class="hover-sign"></div>
                   </div>
-                  <div class="pro-info">
+                  <div class="pro-info fadein-left">
                     <h1><span class="gradient1">sunnyside</span></h1>
                     <p>a responsive web application that fetches and displays real-time weather data for any city.
                     Implemented geolocation-based search and dynamic weather updates including temperature, humidity, wind speed,
                     and conditions.
                     Utilized JavaScript Fetch API to handle API requests and parse JSON responses for live weather information.</p>
-                    <button><i class="fa-solid fa-arrow-up-right-from-square">Website</i></button>
+                    <button  onclick="window.open('https://siddharth-pradhan.github.io/Sunnyside.web/', '_blank')"><i class="fa-solid fa-arrow-up-right-from-square">Website</i></button>
                   </div>
 
               </div>
 
 
                <div class="pro-card">
-                  <div class="pro-vid" >
+                  <div class="pro-vid autoBlur" >
                     <video  loop play-inline muted id="pro3" src="vid/project1.mp4"></video>
                     <div class="hover-sign"></div>
                   </div>
-                  <div class="pro-info">
+                  <div class="pro-info fadein-left">
                     <h1><span class="gradient1">Simpler Portfolio</span></h1>
                     <p>A simpler version of portfolio using mainly css and is much lighter compared to this portfolio so do check it out.</p>
-                    <button><i class="fa-solid fa-arrow-up-right-from-square">Website</i></button>
+                    <button  onclick="window.open('https://siddharth-pradhan.github.io/Simpler-Portfolio/', '_blank')"><i class="fa-solid fa-arrow-up-right-from-square">Website</i></button>
                   </div>
 
               </div>
@@ -155,19 +181,19 @@
 
 
 
-          <section class="skills-sec">
-             <h1 class="sec-title">My <span class="gradient"> Skills</span></h1>
+          <section class="skills-sec" id="Skills">
+             <h1 class="sec-title autoDisplay">My <span class="gradient"> Skills</span></h1>
 
               <div class="skill-box">
                 <img class="skill-image" src="images/digital brain (2).png">
 
-                <div id="vox"  class="designer">
+                <div id="vox"  class="designer autoDisplay">
                   <h1 class="gradient">Designer<i class="fa-solid fa-laptop-code"></i></h1>
                   <p>I'm a web designer and front-end developer skilled in<span class="gradient1">HTML</span>,<span class="gradient1">CSS</span > , <span class="gradient1">JavaScript</span>, and <span class="gradient1">React js</span>. I create responsive, visually appealing, and user-friendly interfaces with a focus on performance and accessibility. I enjoy combining design with code to build clean, functional websites that deliver great user experiences.
                        </p>
                 </div>
 
-                <div id="vox"  class="coder">
+                <div id="vox"  class="coder autoDisplay">
                   <h1 class="gradient">Coder  <i class="fa-solid fa-file-code"></i></h1>
                   <p>I'm a passionate coder with a strong foundation in Data Structures & Algorithms, and proficiency in <span class="gradient1">C</span>,<span class="gradient1">C++</span > , <span class="gradient1">Python</span>, and <span class="gradient1">OOP principles</span>. I enjoy solving complex problems and writing clean, efficient code. My skills span both foundational computer science and practical development, enabling me to build robust and optimized solutions.</p>
                 </div>
@@ -175,10 +201,10 @@
                 <div id="vox"    class="slider">
               
                   <div class="list">
-                    <button class="texty" style="background-color: #080020b7; border:none" onclick="flip()">  <div class="item" style="--position: 1"  ><img class="im" src="images/10.png"> <p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">Html</span> </p></div>   </button>
-                    <button class="texty"style="background-color: #080020b7; border:none" onclick="flip()">  <div class="item" style="--position: 2" ><img class="im" src="images/6.png" ><p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">CSS</span> </p></div>  </button>
-                    <button class="texty"style="background-color: #080020b7; border:none" onclick="flip()">   <div class="item" style="--position: 3"  ><img class="im"src="images/JavaScript.png"><p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">jS</span> </p></div>  </button>
-                    <button class="texty"style="background-color: #080020b7; border:none" onclick="flip()">   <div class="item" style="--position: 4"  ><img class="im"src="images/React.png"><p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">React js</span> </p></div> </button>
+                    <button class="texty" style="background-color: #080020b7; border:none;cursor: pointer;" onclick="flip()">  <div class="item" style="--position: 1"  ><img class="im" src="images/10.png"> <p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">Html</span> </p></div>   </button>
+                    <button class="texty"style="background-color: #080020b7; border:none;cursor: pointer;" onclick="flip()">  <div class="item" style="--position: 2" ><img class="im" src="images/6.png" ><p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">CSS</span> </p></div>  </button>
+                    <button class="texty"style="background-color: #080020b7; border:none;cursor: pointer;" onclick="flip()">   <div class="item" style="--position: 3"  ><img class="im"src="images/JavaScript.png"><p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">jS</span> </p></div>  </button>
+                    <button class="texty"style="background-color: #080020b7; border:none;cursor: pointer;" onclick="flip()">   <div class="item" style="--position: 4"  ><img class="im"src="images/React.png"><p class="text" style="position: absolute; font-size: 25px; font-weight: bolder; font-family:'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;"> <span class="gradient1">React js</span> </p></div> </button>
                   </div>
                 
                 </div>
@@ -192,8 +218,8 @@
 
 
    
-           <section class="contact-section ">
-            <h1 class="sec-title autoDisplay"><span class="gradient">Contact </span>Me</h1>
+           <section class="contact-section " id="contact">
+            <h1 class="sec-title autoDisplay autoDisplay"><span class="gradient">Contact </span>Me</h1>
 
             <div class="social-box autoBlur">
                 <a href="#"><i class="fa-solid fa-phone"></i> +91 9392646897</a>
@@ -207,7 +233,7 @@
             </div>
 
             <div class="contact-box autoBlur">
-                <p>Wheter you're looking to build a new website, improve your existing platform, or bring a unique project to file. i'm here to help.</p>
+                <p>Whether you're looking to build a new website, improve your existing platform, or bring a unique project to file. i'm here to help.</p>
             
                 <p>Full Name</p>
                 <input placeholder="Your Full name" type="full name">
@@ -231,6 +257,10 @@
           <section class="footer">
             <h1 style="font-size: 12px;">©️2025, Made with ❤️‍🔥 by Siddharth Pradhan </h1>
         </section>
+
+
+
+
 
 
 
